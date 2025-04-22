@@ -21,7 +21,7 @@ module top (
     wire P, LE;
     
     clkdiv cd(.clk(clk), .rst(RST), .clkdiv(clkd));
-    create_number numc(.clk(clkd[17]), .btn(btn), .op(op), .n0(I0), .n1(I1), .n2(I2), .n3(I3));
+    create_number numc(.clk(clkd[7]), .btn(btn), .op(op), .n0(I0), .n1(I1), .n2(I2), .n3(I3));
 
     display_sync ds(.I0(I0), .I1(I1), .I2(I2), .I3(I3), .Hex(Hex), .AN(AN), .scan(clkd[18 : 17]), .points(SW[3 : 0]), .LES(SW[7 : 4]), .p(P), .LE(LE));
     MyMC14495 MyMc(.D0(Hex[0]), .D1(Hex[1]), .D2(Hex[2]), .D3(Hex[3]), .point(P), .LE(LE), 

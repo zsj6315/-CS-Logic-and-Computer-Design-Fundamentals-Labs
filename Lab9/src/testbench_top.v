@@ -15,8 +15,8 @@ module uut;
         btn = 0;
         SW = 8'hFF;
         clk = 0;
-        op[0] = 1;
-        op[1] = 1;
+        op[0] = 0;
+        op[1] = 0;
     end
 
     top uut0(.btn(btn), .clk(clk), .op(op), .SW(SW), .AN(AN), .SEGMENT(SEGMENT), .BTNX4(BTNX4), .Ring(Ring));
@@ -41,7 +41,7 @@ module uut;
     end
 
     initial begin
-        $dumpfile(".\\build\\wave.vcd");
+        $dumpfile(".\\build\\or.vcd");
         $dumpvars(0, uut);
         #1000000 $finish;
     end
